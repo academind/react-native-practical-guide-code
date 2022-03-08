@@ -12,7 +12,7 @@ For example, the branch [02-basics](https://github.com/academind/react-native-pr
 
 You can switch branches via the dropdown in the top left corner of this repository page:
 
-IMAGE
+[Selecting a branch](./selecting-branches.png)
 
 # Provided Resources
 
