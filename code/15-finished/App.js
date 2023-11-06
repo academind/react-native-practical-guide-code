@@ -33,7 +33,7 @@ export default function App() {
 
   return (
     <>
-      <StatusBar style="light" />
+      <StatusBar style={modalIsVisible ? 'light' : 'dark'} />
       <View style={styles.appContainer}>
         <Button
           title="Add New Goal"
