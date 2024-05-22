@@ -1,4 +1,6 @@
 import * as SQLite from 'expo-sqlite';
+// openDatabase has been removed from the stable version of expo-sqlite
+//import * as SQLite from 'expo-sqlite/legacy';
 
 const database = SQLite.openDatabase('places.db');
 
