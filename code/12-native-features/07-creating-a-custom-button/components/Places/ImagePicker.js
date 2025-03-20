@@ -2,7 +2,7 @@ import { Alert, Image, StyleSheet, Text, View } from 'react-native';
 import {
   launchCameraAsync,
   useCameraPermissions,
-  PermissionStatus,
+  PermissionStatus
 } from 'expo-image-picker';
 import { useState } from 'react';
 
@@ -43,10 +43,10 @@ function ImagePicker() {
     const image = await launchCameraAsync({
       allowsEditing: true,
       aspect: [16, 9],
-      quality: 0.5,
+      quality: 0.5
     });
 
-    setPickedImage(image.uri);
+    setPickedImage(image.assets[0].uri);
   }
 
   let imagePreview = <Text>No image taken yet.</Text>;
@@ -58,7 +58,9 @@ function ImagePicker() {
   return (
     <View>
       <View style={styles.imagePreview}>{imagePreview}</View>
-      <OutlinedButton icon="camera" onPress={takeImageHandler}>Take Image</OutlinedButton>
+      <OutlinedButton icon='camera' onPress={takeImageHandler}>
+        Take Image
+      </OutlinedButton>
     </View>
   );
 }
@@ -73,10 +75,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.primary100,
-    borderRadius: 4,
+    borderRadius: 4
   },
   image: {
     width: '100%',
-    height: '100%',
-  },
+    height: '100%'
+  }
 });

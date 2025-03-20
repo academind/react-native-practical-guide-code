@@ -43,7 +43,7 @@ function GameScreen({ userNumber, onGameOver }) {
       (direction === 'greater' && currentGuess > userNumber)
     ) {
       Alert.alert("Don't lie!", 'You know that this is wrong...', [
-        { text: 'Sorry!', style: 'cancel' },
+        { text: 'Sorry!', style: 'cancel' }
       ]);
       return;
     }
@@ -73,12 +73,12 @@ function GameScreen({ userNumber, onGameOver }) {
         <View style={styles.buttonsContainer}>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>
-              <Ionicons name="md-remove" size={24} color="white" />
+              <Ionicons name='remove' size={24} color='white' />
             </PrimaryButton>
           </View>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={nextGuessHandler.bind(this, 'greater')}>
-            <Ionicons name="md-add" size={24} color="white" />
+              <Ionicons name='add' size={24} color='white' />
             </PrimaryButton>
           </View>
         </View>
@@ -93,15 +93,15 @@ export default GameScreen;
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    padding: 24,
+    padding: 24
   },
   instructionText: {
-    marginBottom: 12,
+    marginBottom: 12
   },
   buttonsContainer: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   buttonContainer: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
